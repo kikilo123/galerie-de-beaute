@@ -1,0 +1,115 @@
+.prices {
+  padding: 100px 60px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.price-card {
+  position: relative;
+  background-color: #fdecee;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+}
+
+.price-card h3 {
+  font-size: 24px;
+  color: #8c1d33;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f6c97a;
+  margin-bottom: 25px;
+}
+
+.price-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.price-card li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.price-btn {
+  background: linear-gradient(135deg, #8c1d33, #a3243f);
+  color: #ffffff;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.price-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(140, 29, 51, 0.35);
+  background: linear-gradient(135deg, #a3243f, #8c1d33);
+}
+
+.price-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(140, 29, 51, 0.25);
+}
+
+.price-card.recommended {
+  background-color: #8c1d33;
+  color: #ffffff;
+  transform: scale(1.07);
+  box-shadow: 0 25px 50px rgba(140, 29, 51, 0.35);
+}
+
+.price-card.recommended .price-btn {
+  background: linear-gradient(135deg, #f6c97a, #ffd88a);
+  color: #8c1d33;
+}
+.price-card.recommended .price-btn:hover {
+  box-shadow: 0 14px 30px rgba(246, 201, 122, 0.45);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #f6c97a;
+  color: #8c1d33;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+}
+
+.price-card.recommended h3,
+.price-card.recommended li {
+  color: #ffffff;
+}
+
+.price-card.recommended .price {
+  color: #f6c97a;
+}
+.price-card.recommended:hover {
+  transform: scale(1.1);
+}

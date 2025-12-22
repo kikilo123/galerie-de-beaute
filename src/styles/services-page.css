@@ -1,0 +1,143 @@
+/* === PAGE WRAPPER === */
+.services-page {
+  background: linear-gradient(180deg, #fdeef1 0%, #fff 100%);
+  padding: 90px 6%;
+  min-height: 100vh;
+}
+
+/* === GRID === */
+.services-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+  margin-top: 60px;
+}
+
+/* === CARD === */
+.service-category-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 34px 30px 32px;
+  box-shadow: 0 18px 45px rgba(140, 29, 51, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* subtle glow background */
+.service-category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(248, 201, 138, 0.45),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 0;
+}
+
+/* hover effect */
+.service-category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(140, 29, 51, 0.22);
+}
+
+.service-category-card:hover::before {
+  opacity: 1;
+}
+
+/* keep content above glow */
+.service-category-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* === CATEGORY TITLE === */
+.service-category-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #8c1d33;
+  margin-bottom: 18px;
+  letter-spacing: 0.4px;
+}
+
+/* decorative underline */
+.service-category-card h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #8c1d33, #f8c98a);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* === LIST === */
+.service-category-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === LIST ITEM === */
+.service-category-card li {
+  position: relative;
+  padding: 10px 0 10px 22px;
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* custom bullet */
+.service-category-card li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 11px;
+  color: #8c1d33;
+  opacity: 0.8;
+}
+
+.services-booking {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.booking-btn {
+  background: linear-gradient(135deg, #f8c98a, #f3b76f);
+  color: #8c1d33;
+  padding: 16px 42px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 15px 40px rgba(140, 29, 51, 0.25);
+}
+
+.booking-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 22px 55px rgba(140, 29, 51, 0.4);
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 70px 5%;
+  }
+
+  .service-category-card {
+    padding: 28px 24px;
+  }
+
+  .service-category-card h2 {
+    font-size: 20px;
+  }
+}
+

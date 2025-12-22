@@ -1,0 +1,80 @@
+/* Reset */
+:root {
+  --font-ka: "Noto Serif Georgian", serif; 
+
+  --font-en-title: "Playfair Display", serif;
+  --font-en-text: "Montserrat", sans-serif;
+
+  --font-ru-title: "Playfair Display", serif;
+  --font-ru-text: "Montserrat", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
+/* Base styles */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #fdecee; 
+  color: #6b1c2d; 
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===========================
+   LANGUAGE BASED FONTS
+   =========================== */
+   
+/*ქართული  */
+html[lang="ka"] h1,
+html[lang="ka"] h2,
+html[lang="ka"] h3,
+
+html[lang="ka"] p,
+html[lang="ka"] li,
+html[lang="ka"] span,
+html[lang="ka"] button {
+  font-family: var(--font-ka);
+}
+
+/* ინგლისური */
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3 {
+  font-family: var(--font-en-title);
+}
+
+html[lang="en"] p,
+html[lang="en"] li,
+html[lang="en"] span {
+  font-family: var(--font-en-text);
+}
+
+/* რუსული */
+html[lang="ru"] h1,
+html[lang="ru"] h2,
+html[lang="ru"] h3 {
+  font-family: var(--font-ru-title);
+}
+
+html[lang="ru"] p,
+html[lang="ru"] li,
+html[lang="ru"] span {
+  font-family: var(--font-ru-text);
+}
