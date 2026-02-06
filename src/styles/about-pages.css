@@ -71,18 +71,86 @@
 }
 
 /* MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  .about-page {
+    padding: 100px 5%;
+  }
+
   .about-container {
-    grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 60px;
   }
 
   .about-text h1 {
-    font-size: 36px;
+    font-size: 40px;
+  }
+
+  .about-text p {
+    font-size: 16.5px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 80px 5%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 32px;
+  }
+
+  .about-text h1::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-text p {
+    font-size: 15.5px;
+    line-height: 1.65;
   }
 
   .about-image img {
-    border-radius: 26px;
+    border-radius: 24px;
+  }
+
+  /* Mobile-ზე hover არ გვინდა */
+  .about-image:hover img {
+    transform: none;
+    box-shadow:
+      0 25px 60px rgba(140, 29, 51, 0.25),
+      0 0 0 1px rgba(246, 201, 122, 0.25);
   }
 }
+
+
+@media (max-width: 480px) {
+  .about-page {
+    padding: 60px 4%;
+  }
+
+  .about-text h1 {
+    font-size: 26px;
+  }
+
+  .about-text p {
+    font-size: 14.5px;
+  }
+
+  .about-text h1::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .about-image img {
+    border-radius: 20px;
+  }
+}
+
 

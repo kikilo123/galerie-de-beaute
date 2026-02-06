@@ -80,3 +80,74 @@
   color: #8c1d33;
   box-shadow: 0 6px 16px rgba(248, 201, 138, 0.6);
 }
+
+@media (max-width: 1024px) {
+  .simple-header {
+    padding: 20px 5%;
+  }
+
+  .back-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .lang-switch button {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .simple-header {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 18px 5%;
+  }
+
+  /* LOGO + LANG ზემოთ */
+  .simple-header .logo {
+    order: 1;
+  }
+
+  .lang-switch {
+    order: 2;
+  }
+
+  /* BACK ღილაკი ქვემოთ */
+  .back-btn {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .back-text {
+    white-space: nowrap;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .simple-header {
+    padding: 16px 4%;
+  }
+
+  .simple-header .logo img {
+    height: 36px;
+  }
+
+  /* Back ტექსტი დაიმალოს, დარჩეს arrow */
+  .back-text {
+    display: none;
+  }
+
+  .back-icon {
+    font-size: 20px;
+  }
+
+  .lang-switch button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}

@@ -127,17 +127,108 @@
 
 
 /* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .services-page {
+    padding: 80px 5%;
+  }
+
+  .services-page-grid {
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .service-category-card {
+    padding: 32px 26px;
+    border-radius: 22px;
+  }
+
+  .service-category-card h2 {
+    font-size: 21px;
+  }
+
+  .service-category-card li {
+    font-size: 15px;
+  }
+
+  /* recommended UX: ნაკლები jump */
+  .service-category-card:hover {
+    transform: translateY(-6px);
+  }
+}
+
+
+
+
+
 @media (max-width: 768px) {
   .services-page {
     padding: 70px 5%;
   }
 
+  .services-page-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
   .service-category-card {
-    padding: 28px 24px;
+    padding: 26px 22px;
+    border-radius: 20px;
   }
 
   .service-category-card h2 {
-    font-size: 20px;
+    font-size: 19px;
+  }
+
+  .service-category-card li {
+    font-size: 14.5px;
+    padding-left: 20px;
+  }
+
+  /* Mobile-ზე hover არ უნდა "ხტებდეს" */
+  .service-category-card:hover {
+    transform: none;
+    box-shadow: 0 18px 45px rgba(140, 29, 51, 0.12);
+  }
+
+  .services-booking {
+    margin-top: 50px;
+  }
+
+  .booking-btn {
+    padding: 14px 36px;
+    font-size: 15px;
   }
 }
+
+@media (max-width: 480px) {
+  .services-page {
+    padding: 60px 4%;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .service-category-card {
+    padding: 22px 20px;
+    border-radius: 18px;
+  }
+
+  .service-category-card h2 {
+    font-size: 18px;
+  }
+
+  .service-category-card li {
+    font-size: 14px;
+  }
+
+  .booking-btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    padding: 14px 0;
+  }
+}
+
 
