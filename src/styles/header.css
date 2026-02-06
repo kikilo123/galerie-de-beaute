@@ -210,40 +210,30 @@
 
 @media (max-width: 480px) {
   .header {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    /* display: grid; */
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
-    gap: 12px;
+    gap: 13px;
     padding: 14px 16px;
-    align-items: center;
   }
 
   /* LOGO */
-  .logo {
+  .header .logo {
     grid-column: 1 / 2;
     grid-row: 1;
   }
 
-  .logo img {
-    height: 36px;
+  .header .logo img {
+    height: 34px;
   }
 
-  /* BURGER */
-  .burger {
-    display: flex;
-    grid-column: 2 / 3;
-    grid-row: 1;
-    justify-self: end;
-    z-index: 1001;
-  }
 
-  /* LANGUAGE SWITCH — მეორე რიგში */
+  /* LANGUAGE SWITCH — ქვემოთ */
   .lang-switch {
     grid-column: 1 / -1;
     grid-row: 2;
     justify-self: center;
     padding: 4px;
-    gap: 6px;
   }
 
   .lang-switch button {
@@ -251,7 +241,6 @@
     font-size: 12px;
   }
 }
-
 
 /* Desktop only */
 .lang-switch.mobile-lang {
